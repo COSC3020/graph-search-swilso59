@@ -1,7 +1,7 @@
 const fs = require('fs');
 const jsc = require('jsverify');
 
-// Assuming depthFirstSearch and test are defined in 'code.js'
+// Assuming depthFirstSearch is defined in 'code.js'
 eval(fs.readFileSync('code.js') + '');
 
 const adjList = {
@@ -28,5 +28,8 @@ if (path.length > 0 && path[path.length - 1] === targetNode) {
     console.log(`No valid path found from ${startNode} to ${targetNode}`);
 }
 
-// Call the test function
-jsc.assert(test);
+// Verify the result and fail the test if incorrect
+if (path.length === 0 || path[path.length - 1] !== targetNode) {
+    console.error("Test has failed: No path found.");
+    process.exit(1); // Exit with non-zero status code to indicate test failure
+}
