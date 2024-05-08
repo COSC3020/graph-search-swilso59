@@ -1,3 +1,6 @@
+const fs = require('fs');
+const assert = require('assert');
+
 eval(fs.readFileSync('code.js') + '');
 
 const adjList1 = {
@@ -46,3 +49,4 @@ runTest(adjList1, "adjList1");
 
 // Run test for adjList2
 runTest(adjList2, "adjList2");
+
