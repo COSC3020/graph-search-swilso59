@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/M24O3lId)
 # Search in Graphs
 
 Recall the pseudocode for Depth-First Search:
@@ -26,6 +27,17 @@ the function and run automatically when you commit through a GitHub action.
 What is the worst-case big $\Theta$ complexity of your implementation? Add your
 answer, including your reasoning, to this markdown file.
 
+- The time complexity is $\ O(V + E)$.
+
+- The $\ O(V)$ part comes from the explore function were the nodes are marked visted.
+  In the worst case each node may be visted once.
+
+- The $\ O(E)$ is the part of the explore function that iterates through the neighbors of each node.
+  In the worst case each edge is traversed once.
+
 ## Bonus
 
 Implement and analyze breadth-first search.
+
+// I used my previous repository to get started. search-in-graphs-swilso59
+// Recieved help from the TA as well as talk with Vijay about testing. 
